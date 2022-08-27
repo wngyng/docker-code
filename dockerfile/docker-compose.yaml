@@ -9,11 +9,12 @@ services:
     ports:
       - 80:80
     restart: on-failure
+    networks:
+      - lnmp
     volumes:
       - /data/nginxhtml/:/usr/local/nginx/html
   php:
     hostname: php
-    container_name: php-test
     restart: on-failure
     build:
       context: ./lib/centos7/nginx
