@@ -2,7 +2,7 @@ version: '3'
 services:
   nginx:
     hostname: nginx
-    container_name: nginx:v1
+    container_name: nginx-test
     build:
       context: ./lib/centos7/nginx
       dockerfile: dockerfile
@@ -13,7 +13,7 @@ services:
       - /data/nginxhtml/:/usr/local/nginx/html
   php:
     hostname: php
-    container_name: php:v1
+    container_name: php-test
     restart: on-failure
     build:
       context: ./lib/centos7/nginx
