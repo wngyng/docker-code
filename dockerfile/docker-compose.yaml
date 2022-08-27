@@ -10,7 +10,18 @@ services:
     restart: on-failure
     volumes:
       - /data/nginxhtml/:/usr/local/nginx/html
-
+  php:
+    hostname: php
+    container_name: php:v1
+    restart: on-failure
+    build:
+      context: ./lib/centos7/nginx
+      dockerfile: dockerfile
+    networks:
+      - lnmp
+    volumes:
+      - /wwwroot:/usr/local/nginx/html
+    
 networks:
   lnmp:
     driver: bridge
