@@ -7,5 +7,6 @@ services:
       dockerfile: dockerfile
     ports:
       - 80:80
+    restart: on-failure
     volumes:
       - /data/nginxhtml/:/usr/local/nginx/html
