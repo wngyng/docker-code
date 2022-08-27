@@ -3,7 +3,7 @@ services:
   nginx:
     hostname: nginx
     build:
-      context: ./nginx
+      context: ./lib/centos7/nginx
       dockerfile: dockerfile
     ports:
       - 80:80
