@@ -1,4 +1,4 @@
-FROM centos:7
+FROM registry.cn-beijing.aliyuncs.com/dockerwa/centos:7
 LABEL name="www.wang.com"
 RUN  yum install -y gcc gcc-c++ make openssl-devel pcre-devel
 ADD nginx-1.16.1.tar.gz /tmp
