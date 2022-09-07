@@ -1,4 +1,4 @@
-FROM centos:7
+FROM registry.cn-beijing.aliyuncs.com/dockerwa/centos:7
 LABEL name="www.wang.com"
 RUN yum install -y gcc gcc-c++ make gd-devel libxml2-devel libcurl-devel libjpeg-devel libpng-devel openssl-devel
 ADD  php-5.6.40.tar.gz /tmp
