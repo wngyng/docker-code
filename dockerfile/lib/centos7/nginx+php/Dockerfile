@@ -16,5 +16,5 @@ RUN rm -rf /tmp/php-5.6.40* && yum -y clean all
 
 WORKDIR /usr/local/nginx
 EXPOSE 80
-CMD ["./sbin/nginx", "-g", "daemon off;"]
-CMD [ "./sbin/php-fpm","-c","/usr/local/php/etc/php-fpm.conf" ]
+COPY start.sh /
+CMD ["/bin/bash","start.sh"]
